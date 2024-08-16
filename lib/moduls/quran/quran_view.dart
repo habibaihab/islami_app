@@ -39,7 +39,7 @@ class _QuranViewState extends State<QuranView> {
               style: theme.textTheme.bodyLarge
                 ,),
             ),
-            SizedBox(height: 35,child: VerticalDivider(), ),
+            const SizedBox(height: 35,child: VerticalDivider(), ),
             Expanded
               (child:
             Text("اسم السورة" ,
