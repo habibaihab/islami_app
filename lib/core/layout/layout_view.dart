@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_app/moduls/hadith/hadith_view.dart';
 import 'package:islami_app/moduls/quran/quran_view.dart';
 import 'package:islami_app/moduls/radio/radio_view.dart';
@@ -26,6 +27,7 @@ class _LayOutViewState extends State<LayOutView> {
 
   @override
   Widget build(BuildContext context) {
+    var lang = AppLocalizations.of(context)!;
     return Container(
       decoration: const BoxDecoration(
           image:DecorationImage(
@@ -35,7 +37,7 @@ class _LayOutViewState extends State<LayOutView> {
       child: Scaffold(
         appBar: AppBar(
 
-           title: const Text("إسلامي",
+           title:Text(lang.islami,
 
           ),
           centerTitle: true,
@@ -50,21 +52,21 @@ class _LayOutViewState extends State<LayOutView> {
 
           },
 
-          items: const [
-            BottomNavigationBarItem(icon:ImageIcon(AssetImage("assets/icons/radio.png"),),
-              label: "Radio",
+          items:  [
+            BottomNavigationBarItem(icon:const ImageIcon(AssetImage("assets/icons/radio.png"),),
+              label: lang.radio,
             ),
-            BottomNavigationBarItem(icon:ImageIcon(AssetImage("assets/icons/sebha_blue.png"),),
-              label: "Sebha",
+            BottomNavigationBarItem(icon:const ImageIcon(AssetImage("assets/icons/sebha_blue.png"),),
+              label: lang.sebha,
             ),
-            BottomNavigationBarItem(icon:ImageIcon(AssetImage("assets/icons/quran-quran-svgrepo-com.png"),),
-              label: "Hadith",
+            BottomNavigationBarItem(icon:const ImageIcon(AssetImage("assets/icons/quran-quran-svgrepo-com.png"),),
+              label: lang.hadith,
             ),
-            BottomNavigationBarItem(icon:ImageIcon(AssetImage("assets/icons/moshaf_gold.png"),),
-              label: "Quran",
+            BottomNavigationBarItem(icon:const ImageIcon(AssetImage("assets/icons/moshaf_gold.png"),),
+              label: lang.quran,
             ),
-            BottomNavigationBarItem(icon: Icon(Icons.settings),
-                label: "Settings"
+            BottomNavigationBarItem(icon: const Icon(Icons.settings),
+                label: lang.settings,
             ),
 
           ],
