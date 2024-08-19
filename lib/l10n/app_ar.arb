@@ -4,5 +4,7 @@
   "sebha" : "سبحة",
   "hadith" : "حديث",
   "quran" : "قرآن",
-  "settings" : "إعدادات"
+  "settings" : "إعدادات",
+  "language" : "اللغة",
+  "theme_mode": "النمط"
 }
